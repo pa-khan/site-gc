@@ -1,13 +1,13 @@
 /* Including styles files */
-@import sprite.sass
 @import fonts.sass
 @import grid.sass
 @import '../../libs/fancybox/dist/jquery.fancybox.css'
+@import ../../libs/slick-carousel/slick/slick.css
 
 
 /* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
+$font-size: 18px
+$font-family-1: 'Futura', sans-serif
 $color-1: #000
 
 
@@ -21,7 +21,7 @@ body
 	font-size: $font-size
 	font-family: $font-family-1
 	color: $color-1
-	background: white
+	background: #faf7f8
 
 h1, h2, h3, h4, h5, h6
 	font-family: inherit
@@ -65,7 +65,41 @@ input, textarea, button
 		font-family: $font-family-1
 		background: white
 		width: 100%
-
+		border-radius: 5px
+	&_title
+		.input
+			&__title
+				display: inline-block
+				font-size: 22px
+				margin-bottom: 9px
+	&_border-green
+		.input
+			&__wrap
+				border: 1px solid #00693a
+				background-color: #fff
+				&::placeholder
+					color: #949494
+					font-style: italic
+	&_small
+		.input
+			&__title
+				font-size: 19px
+			&__wrap
+				font-size: 16px
+				height: 46px
+				padding: 0 15px
+	&_normal
+		.input
+			&__title
+				font-size: 22px
+			&__wrap
+				font-size: 19px
+				height: 52px
+				padding: 0 20px
+	&_error
+		.input
+			&__wrap
+				border-color: #f00
 
 .textarea
 	position: relative
@@ -76,10 +110,67 @@ input, textarea, button
 		background: white
 		width: 100%
 		resize: none
+		border-radius: 5px
+	&_title
+		.textarea
+			&__title
+				display: inline-block
+				font-size: 22px
+				margin-bottom: 9px
+	&_border-green
+		.textarea
+			&__wrap
+				border: 1px solid #00693a
+				background-color: #fff
+				&::placeholder
+					color: #949494
+					font-style: italic
+	&_small
+		.textarea
+			&__title
+				font-size: 19px
+			&__wrap
+				font-size: 16px
+				height: 85px
+				padding: 12px 15px
+	&_normal
+		.textarea
+			&__wrap
+				font-size: 19px
+				height: 160px
+				padding: 15px 20px
+
+.toggle
+	&__title
+		display: inline-block
+		font-size: 22px
+		margin-bottom: 9px
+	&__list
+		display: flex
+		flex-wrap: wrap
+	&__item
+		margin-right: 17px
+		input
+			display: none
+			&:checked + label
+				color: #fff
+				background-color: #00693a
+		label
+			display: inline-flex
+			align-items: center
+			transition: .3s
+			height: 52px
+			border-radius: 5px
+			color: #00693a
+			border: 1px solid #00693a
+			padding: 0 42px
+			cursor: pointer
+
+
 
 .btn
 	position: relative
-	display: flex
+	display: inline-flex
 	align-items: center
 	justify-content: center
 	font-size: $font-size
@@ -88,6 +179,42 @@ input, textarea, button
 	text-align: center
 	transition: .3s
 	background-color: transparent
+	border-radius: 4px
+	overflow: hidden
+	border-bottom: none
+	span
+		display: flex
+		align-items: center
+		justify-content: center
+	&_gray
+		background-image: linear-gradient(to top, #cddde0 0%, #e8f3f7 100%)
+		box-shadow: 0 7px 12px #b6c7cb
+		span
+			color: #30525a
+			background-image: linear-gradient(to top, #c4d2d5 0%, #e4edf0 100%)
+		&:hover
+			span
+				background-image: none
+	&_green
+		box-shadow: 0 7px 12px #bacec7
+		background-image: linear-gradient(to top, #0b654a 0%, #02874c 100%)
+		span
+			color: #fff
+			background-image: linear-gradient(to top, #105641 0%, #00693a 100%)
+		&:hover
+			span
+				background-image: none
+	&_small
+		span
+			height: 46px
+			padding-left: 30px
+			padding-right: 30px
+	&_normal
+		span
+			height: 52px
+			padding-left: 40px
+			padding-right: 40px
+
 
 .input input, .textarea textarea
 	transition: .3s
@@ -105,9 +232,6 @@ input, .btn, .slick-slide, textarea
 .tar
 	text-align: right
 
-.mid
-	margin-left: auto
-	margin-right: auto
 
 
 
@@ -117,6 +241,739 @@ input, .btn, .slick-slide, textarea
 
 
 
+.panel
+	padding-top: 40px
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+	&__nav
+		li
+			margin-right: 32px
+			&:last-of-type
+				margin-right: 0
+			&.selected, &:hover
+				a
+					color: #00693a
+					border-color: #00693a
+		a
+			display: block
+			font-size: 20px
 
+	&__lang
+		font-size: 20px
+		color: #787878
+		li
+			margin-right: 8px
+			&:last-of-type
+				margin-right: 0
+		a
+			color: #00693a
+			&:hover
+				border-color: #00693a
+	&__phone
+		font-size: 24px
+		a
+			color: #00693a
+
+
+
+.title
+	font-size: 50px
+	line-height: 57px
+	&_green
+		color: #00693a
+	&_pl
+		padding-left: 230px
+
+.header
+
+.hello
+	z-index: 3
+	position: relative
+	min-height: 712px
+	padding-top: 140px
+	background: url('../../img/header.png') no-repeat center top
+	&__content
+		margin-top: 55px
+		margin-left: 495px
+
+	&__text
+		max-width: 300px
+		width: 100%
+		line-height: 22px
+		color: #4b4b4b
+		margin-bottom: 23px
+
+
+
+.advantages
+	&__item
+		z-index: 1
+		position: absolute
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 113px
+		height: 113px
+		border: 2px solid #00693a
+		background-color: #ffffff
+		color: #fff
+		background-image: linear-gradient(to top, #125342 0%, #006c3a 100%)
+		text-align: center
+		border-radius: 50%
+		padding: 0 50px
+		font-size: 16px
+		line-height: 16px
+		font-weight: 700
+		&:nth-of-type(1)
+			top: 277px
+			left: 108px
+		&:nth-of-type(2)
+			top: 185px
+			left: 335px
+		&:nth-of-type(3)
+			top: 225px
+			right: 173px
+
+.bg-white
+	background-color: #fff
+
+
+
+.text
+	ul
+		flex-direction: column
+		li
+			position: relative
+			padding-left: 20px
+			&:before
+				top: 6px
+				left: 0
+				position: absolute
+				display: block
+				content: ''
+				width: 9px
+				height: 9px
+				background-color: #007c46
+				border-radius: 50%
+
+.services
+	padding-top: 70px
+	.case
+		&:before
+			content: ''
+			display: block
+			width: 535px
+			height: 535px
+			background-color: #f4fbfc
+			top: -140px
+			right: 15px
+			position: absolute
+			border-radius: 50%
+		&:after
+			content: ''
+			display: block
+			width: 260px
+			height: 260px
+			background-color: #f4fbfc
+			top: -35px
+			left: 205px
+			position: absolute
+			border-radius: 50%
+	&__title
+		z-index: 1
+		position: relative
+		margin-bottom: 55px
+	&__list
+		z-index: 1
+		position: relative
+		font-size: 20px
+		color: #4b4b4b
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 20px	
+		ul
+			width: 33.333%
+			padding-left: 80px
+			&:nth-of-type(1)
+				padding-left: 140px
+		li
+			width: 230px
+			margin-bottom: 21px
+	&__btn
+		&-wrap
+			text-align: center
+
+.objects
+	padding-top: 78px
+	&__content
+		width: 465px
+		padding-top: 20px
+	&__title
+		margin-bottom: 70px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		color: #4b4b4b
+		font-size: 20px
+		line-height: 23px
+		ul
+			width: 50%
+		li
+			margin-bottom: 21px
+	&__img
+		width: calc(100% - 465px)
+		
+
+.calc
+	position: relative
+	padding-top: 135px
+	.case
+		&:before
+			content: ''
+			background: url('../../img/round-1.png') no-repeat center
+			width: 583px
+			height: 583px
+			position: absolute
+			top: 0
+			left: -568px
+		&:after
+			content: ''
+			background: url('../../img/round-1.png') no-repeat center
+			width: 199px
+			height: 199px
+			position: absolute
+			bottom: -100px
+			right: -100px
+			background-size: 100%
+	&__title
+		text-align: center
+		margin-bottom: 55px
+	&__wrap
+		position: relative
+		width: 580px
+		margin-left: auto
+		margin-right: auto
+		border-radius: 5px
+		background-color: #ecf3f7
+		padding: 52px 0 55px
+	&__desc
+		position: absolute
+		width: 205px
+		font-size: 22px
+		line-height: 27px
+		right: -255px
+		top: 50%
+		transform: translateY(-50%)
+	&__radios
+		margin-left: -75px
+		margin-right: 120px
+		padding-top: 3px
+		
+	&__radio
+		width: 245px
+		height: 120px
+		border-radius: 5px
+		margin-bottom: 70px
+		&:last-of-type
+			margin-bottom: 0
+	&__inputs
+		margin-bottom: 35px
+	&__input
+		margin-bottom: 25px
+		.input
+			&__wrap
+				width: 210px
+			
+		&:last-of-type
+			margin-bottom: 0
+
+	&__total
+		font-size: 34px
+		text-align: center
+.radio
+	color: #5d6a6d
+	background-color: #d3e1e4
+	overflow: hidden
+	border-radius: 5px
+	input
+		display: none
+		&:checked + label
+			color: #fff
+			
+			background-image: linear-gradient(to top, #125342 0%, #006c3a 100%)
+	label
+		display: flex
+		align-items: center
+		height: 100%
+		width: 100%
+		background-image: none
+		padding: 5px 20px 5px 25px
+		font-size: 22px
+		line-height: 27px
+		cursor: pointer
+		
+
+.reviews
+	padding-top: 50px
+	padding-bottom: 80px
+	&__list
+		
+	&__item
+		width: 47%
+		margin-bottom: 35px
+		&:nth-of-type(even)
+			margin-left: 6%
+	&__title
+		margin-bottom: 45px
+	&__head
+		align-items: center
+		margin-bottom: 25px
+	&__img
+		width: 145px
+		height: 145px
+		img
+			border-radius: 50%
+	&__data
+		width: calc(100% - 145px)
+		padding-left: 30px
+		line-height: 23px
+
+	&__name
+		font-size: 25px
+		font-weight: 700
+		margin-bottom: 6px
+
+	&__desc
+		max-width: 240px
+		
+	&__text
+		line-height: 23px
+
+	&__more
+		font-size: 25px
+		text-align: right
+		a
+			color: #006c3a
+			border-color: #006c3a
+
+.contacts
+	padding-top: 140px
+	padding-bottom: 90px
+	.case
+		&:before
+			content: ''
+			background: url('../../img/round-1.png') no-repeat center
+			width: 215px
+			height: 215px
+			position: absolute
+			bottom: -115px
+			left: -195px
+			background-size: 100%
+	&__title
+		text-align: center
+		margin-bottom: 65px
+	&__list
+		width: 410px
+		padding-left: 80px
+		padding-right: 80px
+		padding-top: 36px
+
+	&__item
+		margin-bottom: 30px
+
+	&__head
+		font-size: 20px
+		font-weight: 700
+		margin-bottom: 4px
+
+	&__body
+		font-size: 20px
+	&__map
+		width: calc(100% - 410px)
+		height: 400px
+		position: relative
+		&:before
+			content: ''
+			background: url('../../img/round-1.png') no-repeat center
+			width: 170px
+			height: 170px
+			position: absolute
+			top: -125px
+			right: -50px
+			background-size: 100%
+		#map
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 2
+
+
+
+.about
+	padding-top: 140px
+	padding-bottom: 50px
+	&__title
+		// margin-bottom: 34px
+	&__iso
+		width: 250px
+		height: 250px
+		border-radius: 50%
+		background-color: #fff
+		display: flex
+		align-items: center
+		justify-content: center
+		line-height: 19px
+		color: #007c46
+		font-weight: 700
+		text-align: center
+	&__text
+		color: #463e3c
+		line-height: 24px
+		width: calc(100% - 250px + 17px)
+		padding-top: 42px
+		margin-left: -17px
+
+
+.list
+	padding-top: 60px
+	padding-bottom: 20px
+	.case
+		&:before
+			content: ''
+			position: absolute
+			width: 519px
+			height: 496px
+			left: -245px
+			top: 0
+			background: url('../../img/round-7.png') no-repeat center
+		&:after
+			content: ''
+			position: absolute
+			width: 355px
+			height: 355px
+			background-color: #f4fbfc
+			top: 20px
+			right: 225px
+			border-radius: 50%
+	&__title, &__wrap
+		position: relative
+		z-index: 2
+	&__title
+		margin-bottom: 55px
+	&__wrap
+		color: #4b4b4b
+		ul
+			width: 47%
+			&:nth-of-type(even)
+				margin-left: 6%
+		li
+			font-size: 20px
+			margin-bottom: 20px
+
+	&__btn
+		&-wrap
+			text-align: center
+
+.ur
+	padding-top: 60px
+	padding-bottom: 25px
+	.case
+		&:before
+			content: ''
+			width: 376px
+			height: 376px
+			background-color: #f4fbfc
+			position: absolute
+			top: 0
+			left: 83px
+			border-radius: 50%
+		&:after
+			content: ''
+			width: 497px
+			height: 571px
+			position: absolute
+			top: -135px
+			right: -50px
+			background: url('../../img/round-9.png') no-repeat center
+
+	&__col
+		width: 47%
+		&:nth-of-type(even)
+			margin-left: 6%
+	&__title, &__wrap
+		position: relative
+		z-index: 1
+	&__title
+		margin-bottom: 40px
+	&__text
+		font-size: 20px
+		line-height: 30px
+		color: #4b4b4b
+		ul
+			flex-direction: column
+
+
+.order
+	padding-top: 140px
+	
+	&__title
+		margin-bottom: 60px
+
+	&__info
+		padding-bottom: 65px
+		&-wrap
+			.case
+				&:before
+					content: ''
+					background: url('../../img/round-1.png') no-repeat center
+					width: 235px
+					height: 235px
+					position: absolute
+					top: 690px
+					right: 15px
+					background-size: 100%
+				&:after
+					content: ''
+					background: url('../../img/round-1.png') no-repeat center
+					width: 199px
+					height: 199px
+					position: absolute
+					top: 390px
+					left: -295px
+					background-size: 100%
+		.order
+			&__input
+				width: 340px
+			&__textarea
+				width: 490px
+			
+
+	&__text
+		color: #463e3c
+		line-height: 24px
+		width: 400px
+		margin-right: 100px
+		ul, p, li
+			display: inline
+		li
+			color: #00693a
+			// border-bottom: 1px solid transparent
+			// transition: .3s
+			// cursor: pointer
+			// &:hover
+			// 	border-color: #00693a
+		&_pt
+			padding-top: 34px
+			&-more
+				padding-top: 51px
+		&_links
+			a
+				color: #00693a
+				border-bottom: 2px dashed #00693a
+				&:hover
+					border-color: transparent
+
+	&__items
+		width: calc(100% - 400px - 100px)
+
+	&__input, &__toggle
+		margin-bottom: 35px
+
+	&__form
+		&-wrap
+			padding-top: 45px
+			padding-bottom: 80px
+		.order
+			&__input
+				width: 220px
+				margin-right: 50px
+				margin-bottom: 0
+			&__btn
+				margin-top: 32px
+				width: 185px
+				span
+					width: 100%
+
+
+.price
+	padding-top: 140px
+	padding-bottom: 90px
+	.case
+		&:before
+			content: ''
+			background: url('../../img/round-1.png') no-repeat center
+			width: 290px
+			height: 290px
+			position: absolute
+			top: 230px
+			left: 10px
+			background-size: 100%
+	&__title
+		margin-bottom: 45px
+	&__toggle
+		padding-left: 240px
+		position: relative
+		z-index: 1
+	&__list
+		background-color: #fff
+		margin-bottom: 15px
+		border-radius: 5px
+		&:last-of-type
+			margin-bottom: 0
+		&_open
+			.price
+				&__status
+					&:after
+						transform: rotate(0deg)
+	&__head
+		position: relative
+		color: #fff
+		font-size: 19px
+		background-color: #00693a
+		border-radius: 5px
+		padding: 14px 50px 14px 24px
+		cursor: pointer
+	&__status
+		position: absolute
+		top: 16px
+		right: 15px
+		width: 18px
+		height: 18px
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+			top: 8px
+			left: 0
+			width: 18px
+			height: 2px
+			background-color: #fff
+			transition: .3s
+		&:after
+			transform: rotate(90deg)
+	&__body
+		display: none
+		color: #463e3c
+		padding: 10px 35px 25px 30px
+		table
+			width: 100%
+			text-align: center
+			border-collapse: collapse
+		td, th
+			padding: 14px 10px
+			&:nth-of-type(1)
+				text-align: left
+		
+	&__btn
+		margin-left: 240px
+		margin-top: 35px
+
+
+
+
+.footer
+	color: #fff
+	background-color: #006c3a
+	padding-top: 50px
+	padding-bottom: 60px
+	a
+		color: #fff
+		&:hover
+			border-color: #fff
+	&__title
+		margin-bottom: 22px
+	&__wrap
+		font-weight: 300
+		line-height: 23px
+		margin-left: -15px
+		margin-right: -15px
+	&__col
+		padding-left: 15px
+		padding-right: 15px
+		&:nth-of-type(1)
+			width: 29%
+		&:nth-of-type(2)
+			width: 22%
+		&:nth-of-type(3)
+			width: 49%
+
+
+.popup
+	position: relative
+	display: none
+	font-family: $font-family-1
+	cursor: default
+	&_round
+		width: 400px
+		padding-top: 40px
+		border: 15px solid rgba(0,105,58,1)
+		background-color: #ecf3f7
+	.fancybox-close-small
+		display: none
+	&__close
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 25px
+		right: 5px
+		cursor: pointer
+		transition: .3s
+		&:before, &:after
+			content: ''
+			display: block
+			width: 40px
+			height: 2px
+			background-color: #00693A
+			position: relative
+			transition: .3s
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+			margin-top: -1px
+		&:hover
+			&:before, &:after
+				background-color: #000
+	&__form
+		width: 300px
+		margin-left: auto
+		margin-right: auto
+	&__title
+		font-size: 36px
+		text-align: center
+		margin-bottom: 20px
+
+.form
+	&__input, &__textarea
+		width: 265px
+		margin-left: auto
+		margin-right: auto
+	&__input
+		margin-bottom: 15px
+	&__textarea
+		margin-bottom: 25px
+		.textarea
+			&__wrap
+				height: 85px
+	&__btn-wrap
+		width: 185px
+		margin-left: auto
+		margin-right: auto
+		span
+			width: 100%
+
+
+
+.thanks
+	display: none
+	&__text
+		font-size: 22px
+		padding-top: 110px
+		text-align: center
 .hidden-lg
 	display: none
