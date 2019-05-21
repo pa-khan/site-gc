@@ -62,7 +62,7 @@
 						<div class="order__group row">
 							<div class="order__text">Укажите по шагам: Площадь объекта, график уборки, в графе "тарифы" выберите необходимые работы, дополнительные услуги, работает ваша компания с НДС или нет, дни уборки, название компании и вид объекта. Укажите примечание, если необходимо. В последней графе, сообщите своё имя, контактный телефон и действительный email.</div>
 							<div class="order__items">
-								<div class="order__input input_title input_border-green input_normal">
+								<div class="order__input input_title input_border-green input_normal input_required">
 									<label class="input__title">Площадь помещения, м2</label>
 									<input class="input__wrap" type="text" placeholder="Площадь" name="square">
 								</div>
@@ -101,11 +101,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="order__input input_title input_border-green input_normal">
+								<div class="order__input input_title input_border-green input_normal input_required">
 									<label class="input__title">Количество уборок в неделю</label>
 									<input class="input__wrap" type="text" placeholder="Количество уборок" name="count">
 								</div>
-								<div class="order__input input_title input_border-green input_normal">
+								<div class="order__input input_title input_border-green input_normal input_required">
 									<label class="input__title">Вид объекта</label>
 									<input class="input__wrap" type="text" placeholder="Например: магазин или офис" name="type-object">
 								</div>
@@ -180,7 +180,7 @@
 	<div class="popup__close" data-fancybox-close></div>
 	<form class="popup__form form">
 		<div class="popup__title">Оставить заявку</div>
-		<div class="form__input input input_border-green input_small input_title">
+		<div class="form__input input input_border-green input_small input_title input_required">
 			<label class="input__title">Имя</label>
 			<input class="input__wrap" type="text" name="name" placeholder="Ваше имя">
 		</div>
@@ -188,7 +188,7 @@
 			<label class="input__title">E-mail</label>
 			<input class="input__wrap" type="text" name="email" placeholder="example@mail.ru">
 		</div>
-		<div class="form__input input input_border-green input_small input_title input_phone">
+		<div class="form__input input input_border-green input_small input_title input_phone input_required">
 			<label class="input__title">Телефон</label>
 			<input class="input__wrap" type="tel" name="phone" placeholder="+7 (000) 000-00-00">
 		</div>

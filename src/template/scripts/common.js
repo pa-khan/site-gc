@@ -66,4 +66,45 @@ $(document).ready(function($) {
       }
     });
   };
+
+  function SubmitForm(button, parent) {
+  	button.click(function(event) {
+
+	  	event.preventDefault();
+
+	  	var count = 0,
+	  			form = $(this).parents(parent),
+	  			inputsRequired = form.find('.input_required'),
+	  			inputsRequiredLength = inputsRequired.length;
+
+	  	inputsRequired.each(function(index, el) {
+	  		var input = $(this).find('input');
+	  		if (input.val() != '') {
+	  			count++;
+	  			$(this).removeClass('input_error');
+	  		} else{
+	  			$(this).addClass('input_error');
+	  		}
+	  	});
+
+	  	if (count == inputsRequiredLength) {
+	  		$.ajax({
+				    type: "POST",
+				    url: "order.php",
+				    data: form.serialize()
+				}).done(function() {
+					$.fancybox.close();
+				  $.fancybox.open({src  : '#popup-thanks',type : 'inline'});
+				  
+				});
+				return false;
+	  	}
+
+	  });
+  }
+
+  SubmitForm($('.order__btn'), '.order');
+  SubmitForm($('.popup__form .form__btn'), '.popup__form');
+
+  
 });

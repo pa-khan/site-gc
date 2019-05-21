@@ -434,7 +434,7 @@
       font-size: 18px; }
       .reviews__more a {
         border-color: #006c3a; }
-  .about, .price, .order, .reviews, .contacts {
+  .about, .price, .order, .reviews_page, .contacts {
     padding-top: 200px; }
   .list {
     padding-top: 30px;
