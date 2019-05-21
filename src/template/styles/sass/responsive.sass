@@ -1,7 +1,33 @@
 @media screen and (max-width: 1199px)
 	.case
 		width: 950px
-	
+	.panel
+		padding-top: 35px
+		&__logo
+			width: 140px
+		&__nav
+			li
+				margin-right: 15px
+
+
+	.title
+		&_pl
+			padding-left: 0
+			text-align: center
+
+
+	.hello
+		&__content
+			margin-left: 395px
+
+	.advantages
+		&__item
+			&:nth-of-type(1)
+				left: 20px
+			&:nth-of-type(2)
+				left: 235px
+			&:nth-of-type(3)
+				right: 73px
 	.hidden-lg
 		display: block
 	
@@ -9,11 +35,293 @@
 		display: none
 
 
+	.services
+		.case
+			&:before, &:after
+				display: none
+
+		&__list
+			ul
+				padding-left: 0
+				&:nth-of-type(1)
+					padding-left: 0
+
+	.calc
+		.case
+			&:before, &:after
+				display: none
+		&__desc
+			right: -230px
+		&__wrap
+			width: 440px
+		&__radios
+			margin-left: -75px
+			margin-right: 35px
+		&__radio
+			width: 200px
+			label
+				font-size: 18px
+				line-height: 22px
+				padding: 10px 15px
+		&__inputs
+			width: 260px
+		&__input
+			.input
+				&__wrap
+					width: 100%
+
+	.list, .ur, .price, .order, .reviews, .contacts
+		.case
+			&:before, &:after
+				display: none
+
+	.price
+		padding-bottom: 50px
+		&__toggle
+			padding-left: 0
+		&__btn
+			margin-left: 0
+
+	.order
+		&__text
+			width: 355px
+			margin-right: 30px
+		&__items
+			width: calc(100% - 355px - 30px)
+
+		&__form
+			.order
+				&__input
+					margin-right: 20px
+
+	.reviews
+		&_page
+			.reviews
+				&__title
+					padding-left: 0
+					text-align: center
+			
+	.contacts
+		&__map
+			&:before
+				display: none
+		&__list
+			padding-left: 0
+			padding-right: 50px
+			
 	
 @media screen and (max-width: 992px)
 	.case
 		width: 750px
+	.panel
+		padding-top: 15px
+		.case
+			align-items: center
+			width: 100%
+			padding-right: 76px
+		&__nav
+			z-index: 101
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			position: fixed
+			color: #fff
+			transition: .3s
+			transform: translateX(-100%)
+			background: linear-gradient(to top, #125342 0%, #006c3a 100%)
+			ul
+				height: 100%
+				padding: 12% 0
+			li
+				width: 100%
+				height: 20%
+				display: block
+				margin-right: 0
+				// border-bottom: 1px solid #fff
+				&:last-of-type
+					border-bottom: none
+			a
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 100%
+				height: 100%
+				font-size: 32px
+				color: #fff !important
+				border-bottom: none !important
+			&_toggle
+				transform: translateX(0%)
+		&__phone
+			margin-left: auto
+			margin-right: 15px
+		&__lang
+			padding-bottom: 3px
+			order: 3
 
+	.hum
+		z-index: 102
+		position: fixed
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		right: 15px
+		top: 30px
+		width: 46px
+		height: 46px
+		background-color: #00693a
+		border-radius: 50%
+		padding: 11px 10px
+		cursor: pointer
+		span
+			display: block
+			position: relative
+			width: 100%
+			height: 3px
+			background-color: #fff
+			transition: .3s
+			margin-bottom: 3px
+			margin-left: auto
+			margin-right: auto
+			&:last-of-type
+				margin-bottom: 0
+
+		&_toggle
+			background-color: #fff
+			span
+				background-color: #00693a
+				&:nth-of-type(1)
+					top: 9px
+					transform: rotate(45deg)
+				&:nth-of-type(2)
+					opacity: 0
+				&:nth-of-type(3)
+					top: -9px
+					transform: rotate(-45deg)
+	.title
+		font-size: 38px
+		line-height: 42px
+	.hello
+		&__content
+			margin-left: 290px
+
+
+
+	.advantages
+		padding-top: 60px
+		&__list
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+		&__item
+			position: static
+			margin-left: 10px
+			margin-right: 10px
+			&:nth-of-type(2)
+				margin-top: 20px
+
+	.objects
+		&__content 
+			width: 365px
+			padding-top: 0
+		&__title
+			margin-bottom: 30px
+		&__list
+			// margin-bottom: 5px
+		&__img
+			width: calc(100% - 365px)
+
+
+	.calc
+		padding-top: 65px
+		&__title
+			margin-bottom: 30px
+		&__desc
+			position: static
+			transform: none
+			text-align: center
+			padding-left: 15px
+			padding-right: 15px
+			width: auto
+			margin-bottom: 13px
+		&__wrap
+			padding: 15px 0 20px
+			width: 100%
+			max-width: 440px
+		&__radios
+			margin-left: -5px
+			margin-right: -5px
+			width: calc(100% + 10px)
+			padding-top: 0
+			display: flex
+			margin-bottom: 15px
+
+		&__radio
+			width: calc(50% - 10px)
+			margin-right: 5px
+			margin-left: 5px
+			margin-bottom: 0
+			label
+				font-size: 16px
+				line-height: 18px
+		
+		&__form
+			padding-left: 15px
+			padding-right: 15px
+			
+		&__inputs
+			margin-bottom: 15px
+			width: 100%
+
+		&__input
+			margin-bottom: 20px
+			&:last-of-type
+				margin-bottom: 0
+
+		&__total
+			font-size: 24px
+
+
+
+	.about
+		padding-bottom: 30px
+		&__title
+			margin-bottom: 15px
+		&__iso, &__text
+			margin-left: auto
+			margin-right: auto
+		&__text
+			width: 100%
+			padding-top: 12px
+			
+
+
+	.order
+		&__text
+			display: none
+
+		&__items
+			width: 100%
+
+
+	.contacts
+		padding-bottom: 40px
+		&__title
+			margin-bottom: 40px
+		&__list
+			width: 350px
+			padding-right: 40px
+		&__map
+			width: calc(100% - 350px)
+	
+
+	.footer
+		padding-top: 35px
+		padding-bottom: 35px
+		&__col
+			width: 33.333% !important
+		.case
 	.hidden-md
 		display: block		
 	
@@ -25,6 +333,263 @@
 @media screen and (max-width: 767px)
 	.case
 		width: 100%
+
+
+	.panel
+		.case
+			flex-direction: column
+			padding-right: 15px
+		&__lang
+			margin-top: 14px
+			margin-bottom: 10px
+		&__phone
+			margin-right: auto
+			order: 3
+
+	.title
+		font-size: 30px
+		line-height: 34px
+		text-align: center
+	.hello
+		padding-top: 200px
+		padding-bottom: 25px
+		min-height: 1px
+		background: none
+		&__content
+			margin-left: 0
+			margin-top: 20px
+			text-align: center
+		&__text
+			margin-left: auto
+			margin-right: auto
+	.advantages
+		padding-top: 35px
+		&__item
+			margin-left: 5px
+			margin-right: 5px
+			margin-bottom: 10px
+			&:nth-of-type(2)
+				margin-top: 0
+			
+	.services
+		padding-top: 30px
+		&__title
+			margin-bottom: 25px
+		&__list
+			margin-bottom: 20px
+			ul
+				width: 100%
+			li
+				margin-bottom: 5px
+				&:last-of-type
+					margin-bottom: 0
+
+	.objects
+		padding-top: 45px
+		&__content
+			width: 100%
+		&__title
+			margin-bottom: 20px
+		&__list
+			ul
+				width: 100%
+				margin: 0 !important
+			li
+				margin-bottom: 5px
+		&__img
+			display: none
+
+
+	.reviews
+		padding-top: 40px
+		padding-bottom: 40px
+		&__title
+			margin-bottom: 25px
+		&_block
+			.reviews
+				&__item
+					margin-bottom: 0
+				
+		&_page
+			.reviews
+				&__item
+					width: 100%
+					margin-left: 0 !important
+					margin-right: 0 !important
+					&:last-of-type
+						margin-bottom: 0
+		&__list
+			.slick-dots
+				justify-content: center
+				width: 100%
+				margin-top: 15px
+				margin-bottom: 15px
+				li
+					width: 16px
+					height: 16px
+					transition: .3s
+					border: 2px solid #006c3a
+					border-radius: 50%
+					margin-left: 6px
+					margin-right: 6px
+					cursor: pointer
+					&.slick-active
+						background-color: #006c3a
+				button
+					background: none
+					font-size: 0
+
+		&__head
+			margin-bottom: 15px
+		&__img
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 7px
+		&__data
+			padding-left: 0
+			width: 100%
+			text-align: center
+		&__desc
+			max-width: 100%
+
+		&__more
+			font-size: 18px
+			a
+				border-color: #006c3a
+	
+	.about, .price, .order, .reviews, .contacts
+		padding-top: 200px
+
+
+
+
+	.list
+		padding-top: 30px
+		padding-bottom: 30px
+		&__title
+			margin-bottom: 30px
+		&__wrap
+			ul
+				width: 100%
+				margin: 0 !important
+
+	.ur
+		padding-top: 20px
+		padding-bottom: 0
+		&__title
+			margin-bottom: 20px
+		&__col
+			width: 100%
+			margin: 0 0 20px!important
+
+
+	.price
+		&__title
+			margin-bottom: 20px
+		&__head
+			padding: 5px 15px
+			line-height: 20px
+			min-height: 51px
+			display: flex
+			align-items: center
+		&__body
+			padding: 0 10px
+			table
+				display: block
+				overflow-x: auto
+				th, td
+					padding: 3px 5px
+					line-height: 18px
+		&__status
+			top: 50%
+			transform: translateY(-50%)
+
+
+
+	.order
+		&__title
+			margin-bottom: 30px
+		&__toggle, &__input
+			margin-bottom: 20px
+
+		&__input, &__textarea
+			width: 100% !important
+		
+		&__info
+			padding-bottom: 20px
+
+		&__form
+			&-wrap
+				padding-top: 20px
+				padding-bottom: 20px
+			.order
+				&__input
+					margin-bottom: 15px
+					margin-right: 0
+				&__btn
+					margin-top: 0
+					margin-left: auto
+					margin-right: auto
+
+					
+
+	.toggle
+		&__item
+			margin-right: 0
+			width: 100%
+			margin-bottom: 5px
+			&:last-of-type
+				margin-bottom: 0
+			label
+				width: 100%
+				justify-content: center
+
+		
+
+	
+	.contacts
+		&__title
+			margin-bottom: 25px
+		&__list, &__map
+			width: 100%
+
+		&__list
+			padding-right: 0
+			padding-top: 0
+			margin-bottom: 25px
+
+		&__item
+			margin-bottom: 15px
+			&:last-of-type
+				margin-bottom: 0
+			
+
+	.footer
+		padding-top: 20px
+		padding-bottom: 20px
+		&__col
+			width: 100% !important
+
+
+	.popup
+		border: none
+		width: 95%
+		padding: 15px
+		.fancybox-close-small
+			display: block
+
+
+		&__title
+			font-size: 26px
+
+		&__close
+			display: none
+
+
+		&__form
+			width: 100%
+			max-width: 300px
+
 
 	.hidden-sm
 		display: block

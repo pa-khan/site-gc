@@ -404,7 +404,11 @@ input, .btn, .slick-slide, textarea {
     margin-right: 32px; }
     .panel__nav li:last-of-type {
       margin-right: 0; }
-    .panel__nav li.selected a, .panel__nav li:hover a {
+    .panel__nav li.selected a {
+      color: #00693a;
+      cursor: default;
+      border-color: transparent !important; }
+    .panel__nav li:hover a {
       color: #00693a;
       border-color: #00693a; }
   .panel__nav a {
@@ -422,9 +426,14 @@ input, .btn, .slick-slide, textarea {
       .panel__lang a:hover {
         border-color: #00693a; }
   .panel__phone {
-    font-size: 24px; }
+    font-size: 24px;
+    width: 210px;
+    text-align: right; }
     .panel__phone a {
-      color: #00693a; }
+      color: #00693a;
+      cursor: default; }
+  .panel__hum {
+    display: none; }
 
 .title {
   font-size: 50px;
@@ -689,6 +698,31 @@ input, .btn, .slick-slide, textarea {
 .reviews {
   padding-top: 50px;
   padding-bottom: 80px; }
+  .reviews_page {
+    padding-top: 140px;
+    padding-bottom: 35px; }
+    .reviews_page .case:before {
+      content: '';
+      background: url("../../img/round-1.png") no-repeat center;
+      width: 199px;
+      height: 199px;
+      position: absolute;
+      top: 685px;
+      left: -255px;
+      background-size: 100%; }
+    .reviews_page .case:after {
+      content: '';
+      background: url("../../img/round-1.png") no-repeat center;
+      width: 95px;
+      height: 95px;
+      position: absolute;
+      top: -27px;
+      right: 5px;
+      background-size: 100%; }
+    .reviews_page .reviews__title {
+      padding-left: 175px; }
+    .reviews_page .reviews__item {
+      margin-bottom: 45px; }
   .reviews__item {
     width: 47%;
     margin-bottom: 35px; }
@@ -725,8 +759,9 @@ input, .btn, .slick-slide, textarea {
     font-size: 25px;
     text-align: right; }
     .reviews__more a {
-      color: #006c3a;
-      border-color: #006c3a; }
+      color: #006c3a; }
+      .reviews__more a:hover {
+        border-color: #006c3a; }
 
 .contacts {
   padding-top: 140px;
@@ -979,10 +1014,12 @@ input, .btn, .slick-slide, textarea {
             border-radius: 5px; }
     .price__list:last-of-type {
       margin-bottom: 0; }
+    .price__list_open .price__head {
+      cursor: default; }
     .price__list_open .price__status:after {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg); }
+      -webkit-transform: rotateF(0deg);
+          -ms-transform: rotateF(0deg);
+              transform: rotateF(0deg); }
   .price__head {
     position: relative;
     color: #fff;
@@ -1059,27 +1096,30 @@ input, .btn, .slick-slide, textarea {
   position: relative;
   display: none;
   font-family: "Futura", sans-serif;
-  cursor: default; }
-  .popup_round {
+  cursor: default;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+  .popup_normal {
     width: 400px;
     padding-top: 40px;
+    padding-bottom: 40px;
     border: 15px solid #00693a;
     background-color: #ecf3f7; }
   .popup .fancybox-close-small {
     display: none; }
   .popup__close {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     top: 25px;
-    right: 5px;
+    right: 10px;
     cursor: pointer;
     -webkit-transition: .3s;
     transition: .3s; }
     .popup__close:before, .popup__close:after {
       content: '';
       display: block;
-      width: 40px;
+      width: 30px;
       height: 2px;
       background-color: #00693A;
       position: relative;
@@ -1125,12 +1165,9 @@ input, .btn, .slick-slide, textarea {
   .form__btn-wrap span {
     width: 100%; }
 
-.thanks {
-  display: none; }
-  .thanks__text {
-    font-size: 22px;
-    padding-top: 110px;
-    text-align: center; }
+.thanks__text {
+  font-size: 22px;
+  text-align: center; }
 
 .hidden-lg {
   display: none; }

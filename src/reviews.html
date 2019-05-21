@@ -26,13 +26,13 @@
 	<header class="header">
 		<div class="panel">
 			<div class="case row between">
-				<div class="panel__logo"><img src="upload/logo.png" alt=""></div>
+				<div class="panel__logo"><a href="index.html"><img src="upload/logo.png" alt=""></a></div>
 				<nav class="panel__nav">
 					<ul>
 						<li><a href="about.html">О компании</a></li>
 						<li><a href="price.html">Цены</a></li>
 						<li><a href="calc.html">Калькулятор</a></li>
-						<li><a href="reviews.html">Отзывы</a></li>
+						<li class="selected"><a href="reviews.html">Отзывы</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</nav>
@@ -50,114 +50,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="hello">
-			<div class="case">
-				<div class="hello__title title title_green title_pl"><h1>Клининговая компания «Гранд Клининг»: профессионализм с большой буквы</h1></div>
-				<div class="hello__content">
-					<div class="hello__text">Более 10 лет наша компания оказывает услуги в сфере уборки помещений, гарантируя качественный результат и высокую скорость работ.</div>
-					<a data-fancybox data-src="#popup-order" href="javascript:;" class="hello__btn btn btn_gray btn_small"><span>Срочная заявка</span></a>
-				</div>
-				<div class="hello__advantages advantages">
-					<div class="advantages__list">
-						<div class="advantages__item">Экологичная уборка</div>
-						<div class="advantages__item">Гарантия чистоты</div>
-						<div class="advantages__item">Любое время</div>
-					</div>
-				</div>
-			</div>
-		</div>	
 	</header>
 
 
 	<main class="main">
-		<div class="services bg-white">
+		<div class="reviews reviews_page">
 			<div class="case">
-				<div class="services__title title">Спектр услуг</div>
-				<div class="services__list text">
-					<ul>
-						<li>После уборки</li>
-						<li>Генеральная уборка</li>
-						<li>Промышленный альпинизм</li>
-						<li>Мытьё фасадов</li>
-					</ul>
-					<ul>
-						<li>Мойка витрин</li>
-						<li>Чистка мягкой мебели</li>
-						<li>Чистка твёрдых полов</li>
-						<li>Шлифовка и полировка гранита</li>
-					</ul>
-					<ul>
-						<li>Шлифовка и полировка мрамора</li>
-						<li>Химчистка ковров</li>
-						<li>Вывоз снега</li>
-						<li>Дезинфекция и дизенсекция</li>
-					</ul>
-				</div>
-				<div class="services__btn-wrap"><a data-fancybox data-src="#popup-order" href="javascript:;" class="services__btn btn btn_green btn_normal"><span>Срочная заявка</span></a></div>
-			</div>
-		</div>
-		<div class="objects bg-white">
-			<div class="case">
-				<div class="objects__wrap row">
-					<div class="objects__content">
-						<div class="objects__title title">Объекты уборки</div>
-						<div class="objects__list text">
-							<ul>
-								<li>Коммерческие помещения</li>
-								<li>Офисы</li>
-								<li>Дома, коттеджи</li>
-								<li>Бизнес-центры</li>
-							</ul>
-							<ul>
-								<li>Образовательные учреждения</li>
-								<li>Фитнес-центры</li>
-								<li>Торговые центры</li>
-								<li>Внешняя территория</li>
-							</ul>
-						</div>
-					</div>
-					<div class="objects__img"><img src="upload/objects.png" alt=""></div>
-				</div>
-			</div>
-		</div>
-		<div class="calc bg-white">
-			<div class="case">
-				<div class="calc__title title">Калькулятор расчета стоимости услуг</div>
-				<div class="calc__wrap">
-					<div class="calc__desc">Уборка в день обращения — наценка за срочность 30%</div>
-					<div class="calc__form row">
-						<div class="calc__radios">
-							<div class="calc__radio radio">
-								<input type="radio" name="type-clining" value="1" checked="checked">
-								<label>Стационарная (регулярная) уборка</label>
-							</div>
-							<div class="calc__radio radio">
-								<input type="radio" name="type-clining" value="2">
-								<label>Разовая комплексная "генеральная" уборка помещений</label>
-							</div>
-						</div>
-						<div class="calc__inputs">
-							<div class="calc__input input input_border-green input_normal input_title">
-								<label class="input__title">Офисные помещения</label>
-								<input class="input__wrap" type="tel" placeholder="Площадь" name="office">
-							</div>
-							<div class="calc__input input input_border-green input_normal input_title">
-								<label class="input__title">Квартиры</label>
-								<input class="input__wrap" type="tel" placeholder="Площадь" name="plate">
-							</div>
-							<div class="calc__input input input_border-green input_normal input_title">
-								<label class="input__title">Послестроительная уборка</label>
-								<input class="input__wrap" type="tel" placeholder="Площадь" name="after-build">
-							</div>
-						</div>
-					</div>
-					<div class="calc__total">Итого: <span>0</span> руб.</div>
-				</div>
-			</div>
-		</div>
-		<div class="reviews reviews_block bg-white">
-			<div class="case">
-				<div class="reviews__title title">Отзывы</div>
+				<div class="reviews__title title title_green">Отзывы</div>
 				<div class="reviews__list row">
 					<div class="reviews__item">
 						<div class="reviews__head row">
@@ -183,8 +82,55 @@
 							<div class="reviews__text">Клининговая компания «СИТИ Клининг» имеет статус лидера отрасли. Такой успех объясняется богатым опытом и комплексным подходом, а также клиентоориентированностью и применением современных чистящих средств, передовых материалов и технологий. Даже в случае с нестандартными и сложными заказами мы гарантируем высокое качество работ, учитываем пожелания клиента и стремимся максимально соответствовать им.</div>
 						</div>
 					</div>
+					<div class="reviews__item">
+						<div class="reviews__head row">
+							<div class="reviews__img"><img src="upload/reviews/1.png" alt=""></div>
+							<div class="reviews__data">
+								<div class="reviews__name">Сергей Юрьевич Дроздов,</div>
+								<div class="reviews__desc">директор ГБОУ ЦО № 429 "Соколиная гора" (г. Москва)</div>
+							</div>
+						</div>
+						<div class="reviews__body">
+							<div class="reviews__text">Клининговая компания «СИТИ Клининг» имеет статус лидера отрасли. Такой успех объясняется богатым опытом и комплексным подходом, а также клиентоориентированностью и применением современных чистящих средств, передовых материалов и технологий. Даже в случае с нестандартными и сложными заказами мы гарантируем высокое качество работ, учитываем пожелания клиента и стремимся максимально соответствовать им.</div>
+						</div>
+					</div>
+					<div class="reviews__item">
+						<div class="reviews__head row">
+							<div class="reviews__img"><img src="upload/reviews/1.png" alt=""></div>
+							<div class="reviews__data">
+								<div class="reviews__name">Сергей Юрьевич Дроздов,</div>
+								<div class="reviews__desc">директор ГБОУ ЦО № 429 "Соколиная гора" (г. Москва)</div>
+							</div>
+						</div>
+						<div class="reviews__body">
+							<div class="reviews__text">Клининговая компания «СИТИ Клининг» имеет статус лидера отрасли. Такой успех объясняется богатым опытом и комплексным подходом, а также клиентоориентированностью и применением современных чистящих средств, передовых материалов и технологий. Даже в случае с нестандартными и сложными заказами мы гарантируем высокое качество работ, учитываем пожелания клиента и стремимся максимально соответствовать им.</div>
+						</div>
+					</div>
+					<div class="reviews__item">
+						<div class="reviews__head row">
+							<div class="reviews__img"><img src="upload/reviews/1.png" alt=""></div>
+							<div class="reviews__data">
+								<div class="reviews__name">Сергей Юрьевич Дроздов,</div>
+								<div class="reviews__desc">директор ГБОУ ЦО № 429 "Соколиная гора" (г. Москва)</div>
+							</div>
+						</div>
+						<div class="reviews__body">
+							<div class="reviews__text">Клининговая компания «СИТИ Клининг» имеет статус лидера отрасли. Такой успех объясняется богатым опытом и комплексным подходом, а также клиентоориентированностью и применением современных чистящих средств, передовых материалов и технологий. Даже в случае с нестандартными и сложными заказами мы гарантируем высокое качество работ, учитываем пожелания клиента и стремимся максимально соответствовать им.</div>
+						</div>
+					</div>
+					<div class="reviews__item">
+						<div class="reviews__head row">
+							<div class="reviews__img"><img src="upload/reviews/1.png" alt=""></div>
+							<div class="reviews__data">
+								<div class="reviews__name">Сергей Юрьевич Дроздов,</div>
+								<div class="reviews__desc">директор ГБОУ ЦО № 429 "Соколиная гора" (г. Москва)</div>
+							</div>
+						</div>
+						<div class="reviews__body">
+							<div class="reviews__text">Клининговая компания «СИТИ Клининг» имеет статус лидера отрасли. Такой успех объясняется богатым опытом и комплексным подходом, а также клиентоориентированностью и применением современных чистящих средств, передовых материалов и технологий. Даже в случае с нестандартными и сложными заказами мы гарантируем высокое качество работ, учитываем пожелания клиента и стремимся максимально соответствовать им.</div>
+						</div>
+					</div>
 				</div>
-				<div class="reviews__more"><a href="reviews.html">Все отзывы</a></div>
 			</div>
 		</div>
 	</main>

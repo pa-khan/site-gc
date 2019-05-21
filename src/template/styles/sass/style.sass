@@ -253,7 +253,12 @@ input, .btn, .slick-slide, textarea
 			margin-right: 32px
 			&:last-of-type
 				margin-right: 0
-			&.selected, &:hover
+			&.selected
+				a
+					color: #00693a
+					cursor: default
+					border-color: transparent !important
+			&:hover
 				a
 					color: #00693a
 					border-color: #00693a
@@ -274,9 +279,14 @@ input, .btn, .slick-slide, textarea
 				border-color: #00693a
 	&__phone
 		font-size: 24px
+		width: 210px
+		text-align: right
 		a
 			color: #00693a
-
+			cursor: default
+	
+	&__hum
+		display: none
 
 
 .title
@@ -519,6 +529,34 @@ input, .btn, .slick-slide, textarea
 .reviews
 	padding-top: 50px
 	padding-bottom: 80px
+	&_page
+		padding-top: 140px
+		padding-bottom: 35px
+		.case
+			&:before
+				content: ''
+				background: url('../../img/round-1.png') no-repeat center
+				width: 199px
+				height: 199px
+				position: absolute
+				top: 685px
+				left: -255px
+				background-size: 100%
+			&:after
+				content: ''
+				background: url('../../img/round-1.png') no-repeat center
+				width: 95px
+				height: 95px
+				position: absolute
+				top: -27px
+				right: 5px
+				background-size: 100%
+		.reviews
+			&__title
+				padding-left: 175px
+			&__item
+				margin-bottom: 45px
+				
 	&__list
 		
 	&__item
@@ -557,7 +595,8 @@ input, .btn, .slick-slide, textarea
 		text-align: right
 		a
 			color: #006c3a
-			border-color: #006c3a
+			&:hover
+				border-color: #006c3a
 
 .contacts
 	padding-top: 140px
@@ -827,9 +866,11 @@ input, .btn, .slick-slide, textarea
 			margin-bottom: 0
 		&_open
 			.price
+				&__head
+					cursor: default
 				&__status
 					&:after
-						transform: rotate(0deg)
+						transform: rotateF(0deg)
 	&__head
 		position: relative
 		color: #fff
@@ -908,25 +949,27 @@ input, .btn, .slick-slide, textarea
 	display: none
 	font-family: $font-family-1
 	cursor: default
-	&_round
+	border-radius: 5px
+	&_normal
 		width: 400px
 		padding-top: 40px
+		padding-bottom: 40px
 		border: 15px solid rgba(0,105,58,1)
 		background-color: #ecf3f7
 	.fancybox-close-small
 		display: none
 	&__close
 		position: absolute
-		width: 40px
-		height: 40px
+		width: 30px
+		height: 30px
 		top: 25px
-		right: 5px
+		right: 10px
 		cursor: pointer
 		transition: .3s
 		&:before, &:after
 			content: ''
 			display: block
-			width: 40px
+			width: 30px
 			height: 2px
 			background-color: #00693A
 			position: relative
@@ -970,10 +1013,8 @@ input, .btn, .slick-slide, textarea
 
 
 .thanks
-	display: none
 	&__text
 		font-size: 22px
-		padding-top: 110px
 		text-align: center
 .hidden-lg
 	display: none

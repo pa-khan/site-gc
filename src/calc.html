@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Grand Clining</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+<div class="main-wrap">
+
+	<header class="header">
+		<div class="panel">
+			<div class="case row between">
+				<div class="panel__logo"><a href="index.html"><img src="upload/logo.png" alt=""></a></div>
+				<nav class="panel__nav">
+					<ul>
+						<li><a href="about.html">О компании</a></li>
+						<li><a href="price.html">Цены</a></li>
+						<li class="selected"><a href="calc.html">Калькулятор</a></li>
+						<li><a href="reviews.html">Отзывы</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="panel__lang">
+					<ul>
+						<li>rus</li>
+						<li><a href="en/">eng</a></li>
+					</ul>
+				</div>
+				<div class="panel__phone"><a href="tel:+70000000000">+7 (000) 000-00-00</a></div>
+				<div class="panel__hum hum">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<main class="main">
+		<form class="order">
+			<div class="order__info-wrap">
+				<div class="case">
+					<div class="order__title title title_green title_pl">Заполните форму и получите коммерческое предложение с расчетом на свою почту</div>
+					<div class="order__info">
+						<div class="order__group row">
+							<div class="order__text">Укажите по шагам: Площадь объекта, график уборки, в графе "тарифы" выберите необходимые работы, дополнительные услуги, работает ваша компания с НДС или нет, дни уборки, название компании и вид объекта. Укажите примечание, если необходимо. В последней графе, сообщите своё имя, контактный телефон и действительный email.</div>
+							<div class="order__items">
+								<div class="order__input input_title input_border-green input_normal">
+									<label class="input__title">Площадь помещения, м2</label>
+									<input class="input__wrap" type="text" placeholder="Площадь" name="square">
+								</div>
+								<div class="order__toggle toggles">
+									<div class="toggle__title">График уборки</div>
+									<div class="toggle__list">
+										<div class="toggle__item toggle">
+											<input type="radio" name="time" value="morning" checked="checked">
+											<label>Утренняя уборка</label>
+										</div>
+										<div class="toggle__item toggle">
+											<input type="radio" name="time" value="evening">
+											<label>Вечерняя уборка</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="order__group row">
+							<div class="order__text order__text_links order__text_pt-more">Информация по тарифам: <a href="">Эконом</a>, <a href="">Стандарт</a>, <a href="">VIP</a></div>
+							<div class="order__items">
+								<div class="order__toggle toggles">
+									<div class="toggle__title">Тариф</div>
+									<div class="toggle__list">
+										<div class="toggle__item toggle">
+											<input type="radio" name="tariff" value="1" checked="checked">
+											<label>Эконом</label>
+										</div>
+										<div class="toggle__item toggle">
+											<input type="radio" name="tariff" value="2">
+											<label>Стандарт</label>
+										</div>
+										<div class="toggle__item toggle">
+											<input type="radio" name="tariff" value="3">
+											<label>VIP</label>
+										</div>
+									</div>
+								</div>
+								<div class="order__input input_title input_border-green input_normal">
+									<label class="input__title">Количество уборок в неделю</label>
+									<input class="input__wrap" type="text" placeholder="Количество уборок" name="count">
+								</div>
+								<div class="order__input input_title input_border-green input_normal">
+									<label class="input__title">Вид объекта</label>
+									<input class="input__wrap" type="text" placeholder="Например: магазин или офис" name="type-object">
+								</div>
+							</div>
+						</div>
+						<div class="order__group row">
+							<div class="order__text order__text_pt">
+								<p>Укажите дополнительные услуги, которые вам необходимы: </p>
+								<ul>
+									<li>Поставка расходных материалов, Техническое обслуживание; </li>
+									<li>Ремонт мебели, обслуживание техники и коммуникаций; </li>
+									<li>Дворник; </li>
+									<li>Обслуживание офиса во время мероприятия; </li>
+									<li>Вывоз мусора; </li>
+									<li>Флористика и озеленение</li>
+								</ul>
+							</div>
+							<div class="order__items">
+								<div class="order__textarea textarea textarea_title textarea_normal textarea_border-green">
+									<div class="textarea__title">Примечание</div>
+									<textarea class="textarea__wrap" name="prim" placeholder="Например: периодически нужен дополнительный сотрудник"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order__form-wrap bg-white">
+				<div class="case">
+					<div class="order__form row i-top">
+						<div class="order__input input_title input_small input_border-green input_required">
+							<label class="input__title">Имя</label>
+							<input class="input__wrap" type="text" placeholder="Ваше имя" name="name">
+						</div>
+						<div class="order__input input_title input_small input_border-green">
+							<label class="input__title">E-mail</label>
+							<input class="input__wrap" type="text" placeholder="example@mail.ru" name="email">
+						</div>
+						<div class="order__input input_title input_small input_border-green input_phone input_required">
+							<label class="input__title">Телефон</label>
+							<input class="input__wrap" type="tel" placeholder="+7 (000) 000-00-00" name="phone">
+						</div>
+						<button class="order__btn btn btn_green btn_small"><span>Оставить заявку</span></button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</main>
+
+	<footer class="footer">
+		<div class="case">
+			<div class="footer__title title">Контакты</div>
+			<div class="footer__wrap row">
+				<div class="footer__col">
+					<p>тел.: +7 (495) 212-1938, 928-1960</p>
+					<p>E-mail: citicleaning@gmail.com</p>
+				</div>
+				<div class="footer__col">
+					<p><a href="http://www.ХорошаяУборка.рф" target="_blank" rel="nofollow">www.ХорошаяУборка.рф</a></p>
+					<p><a href="http://www.cleaninginrussia.com" target="_blank" rel="nofollow">www.cleaninginrussia.com</a></p>
+				</div>
+				<div class="footer__col">
+					<p>Россия, 123100, г. Москва, <br>Набережная Тараса Шевченко, 23 А. "Москва СИТИ Башня 2000".</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+
+<div class="popup popup_normal" id="popup-order">
+	<div class="popup__close" data-fancybox-close></div>
+	<form class="popup__form form">
+		<div class="popup__title">Оставить заявку</div>
+		<div class="form__input input input_border-green input_small input_title">
+			<label class="input__title">Имя</label>
+			<input class="input__wrap" type="text" name="name" placeholder="Ваше имя">
+		</div>
+		<div class="form__input input input_border-green input_small input_title">
+			<label class="input__title">E-mail</label>
+			<input class="input__wrap" type="text" name="email" placeholder="example@mail.ru">
+		</div>
+		<div class="form__input input input_border-green input_small input_title input_phone">
+			<label class="input__title">Телефон</label>
+			<input class="input__wrap" type="tel" name="phone" placeholder="+7 (000) 000-00-00">
+		</div>
+		<div class="form__textarea textarea textarea_border-green textarea_small textarea_title">
+			<label class="textarea__title">Дополнительная информация</label>
+			<textarea name="comment" placeholder="Чем мы можем вам помочь?" class="textarea__wrap"></textarea>
+		</div>
+		<div class="form__btn-wrap"><button class="form__btn btn btn_green btn_small"><span>Срочная заявка</span></button></div>
+	</form>
+</div>
+
+<div class="popup popup_normal" id="popup-thanks">
+	<div class="popup__close" data-fancybox-close></div>
+	<div class="popup__thanks thanks">
+		<div class="popup__title thanks__title">Спасибо!</div>
+		<div class="thanks__text">Ваша заявка успешно отправлена.</div>
+	</div>
+</div>
+</body>
+</html>

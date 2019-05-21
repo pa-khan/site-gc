@@ -26,10 +26,10 @@
 	<header class="header">
 		<div class="panel">
 			<div class="case row between">
-				<div class="panel__logo"><img src="upload/logo.png" alt=""></div>
+				<div class="panel__logo"><a href="index.html"><img src="upload/logo.png" alt=""></a></div>
 				<nav class="panel__nav">
 					<ul>
-						<li><a href="about.html">О компании</a></li>
+						<li class="selected"><a href="about.html">О компании</a></li>
 						<li><a href="price.html">Цены</a></li>
 						<li><a href="calc.html">Калькулятор</a></li>
 						<li><a href="reviews.html">Отзывы</a></li>
@@ -50,108 +50,62 @@
 				</div>
 			</div>
 		</div>
-		<div class="hello">
-			<div class="case">
-				<div class="hello__title title title_green title_pl"><h1>Клининговая компания «Гранд Клининг»: профессионализм с большой буквы</h1></div>
-				<div class="hello__content">
-					<div class="hello__text">Более 10 лет наша компания оказывает услуги в сфере уборки помещений, гарантируя качественный результат и высокую скорость работ.</div>
-					<a data-fancybox data-src="#popup-order" href="javascript:;" class="hello__btn btn btn_gray btn_small"><span>Срочная заявка</span></a>
-				</div>
-				<div class="hello__advantages advantages">
-					<div class="advantages__list">
-						<div class="advantages__item">Экологичная уборка</div>
-						<div class="advantages__item">Гарантия чистоты</div>
-						<div class="advantages__item">Любое время</div>
-					</div>
-				</div>
-			</div>
-		</div>	
 	</header>
 
 
 	<main class="main">
-		<div class="services bg-white">
+		<div class="about">
 			<div class="case">
-				<div class="services__title title">Спектр услуг</div>
-				<div class="services__list text">
-					<ul>
-						<li>После уборки</li>
-						<li>Генеральная уборка</li>
-						<li>Промышленный альпинизм</li>
-						<li>Мытьё фасадов</li>
-					</ul>
-					<ul>
-						<li>Мойка витрин</li>
-						<li>Чистка мягкой мебели</li>
-						<li>Чистка твёрдых полов</li>
-						<li>Шлифовка и полировка гранита</li>
-					</ul>
-					<ul>
-						<li>Шлифовка и полировка мрамора</li>
-						<li>Химчистка ковров</li>
-						<li>Вывоз снега</li>
-						<li>Дезинфекция и дизенсекция</li>
-					</ul>
-				</div>
-				<div class="services__btn-wrap"><a data-fancybox data-src="#popup-order" href="javascript:;" class="services__btn btn btn_green btn_normal"><span>Срочная заявка</span></a></div>
-			</div>
-		</div>
-		<div class="objects bg-white">
-			<div class="case">
-				<div class="objects__wrap row">
-					<div class="objects__content">
-						<div class="objects__title title">Объекты уборки</div>
-						<div class="objects__list text">
-							<ul>
-								<li>Коммерческие помещения</li>
-								<li>Офисы</li>
-								<li>Дома, коттеджи</li>
-								<li>Бизнес-центры</li>
-							</ul>
-							<ul>
-								<li>Образовательные учреждения</li>
-								<li>Фитнес-центры</li>
-								<li>Торговые центры</li>
-								<li>Внешняя территория</li>
-							</ul>
-						</div>
-					</div>
-					<div class="objects__img"><img src="upload/objects.png" alt=""></div>
+				<div class="about__title title title_pl title_green">О компании «Гранд Клининг»</div>
+				<div class="about__wrap row">
+					<div class="about__iso">Наша компания <br>сертифицирована <br>по системе <br>ISO 9001:2015</div>
+					<div class="about__text">Клининговая компания «МосКлининг» уже не первый год успешно осуществляет услуги по уборке офисов, торговых и бизнес центров, прилегающих территорий, жилых и нежилых помещений на высоком уровне. Кроме того, мы успешно реализовали поставленные задачи разной степени сложности при уборке зданий, жилых и нежилых помещений, заводов, загородных коттеджей после ремонтов и пожаров. На счету нашей компании уборка после строительства большого Храмового комплекса и уборка двух высоток ММДЦ Москва-Сити, а также ежедневное обслуживание тысяч метров коммерческих помещений на ежедневной основе по долгосрочным договорам с предоставлением всего необходимого: техники, инвентаря, средств для уборки, расходных материалов и многое другое. В 2017 году мы расширили свою географию и начали работу в регионах России.</div>
 				</div>
 			</div>
 		</div>
-		<div class="calc bg-white">
+		<div class="list list_advantages bg-white">
 			<div class="case">
-				<div class="calc__title title">Калькулятор расчета стоимости услуг</div>
-				<div class="calc__wrap">
-					<div class="calc__desc">Уборка в день обращения — наценка за срочность 30%</div>
-					<div class="calc__form row">
-						<div class="calc__radios">
-							<div class="calc__radio radio">
-								<input type="radio" name="type-clining" value="1" checked="checked">
-								<label>Стационарная (регулярная) уборка</label>
-							</div>
-							<div class="calc__radio radio">
-								<input type="radio" name="type-clining" value="2">
-								<label>Разовая комплексная "генеральная" уборка помещений</label>
-							</div>
-						</div>
-						<div class="calc__inputs">
-							<div class="calc__input input input_border-green input_normal input_title">
-								<label class="input__title">Офисные помещения</label>
-								<input class="input__wrap" type="tel" placeholder="Площадь" name="office">
-							</div>
-							<div class="calc__input input input_border-green input_normal input_title">
-								<label class="input__title">Квартиры</label>
-								<input class="input__wrap" type="tel" placeholder="Площадь" name="plate">
-							</div>
-							<div class="calc__input input input_border-green input_normal input_title">
-								<label class="input__title">Послестроительная уборка</label>
-								<input class="input__wrap" type="tel" placeholder="Площадь" name="after-build">
-							</div>
+				<div class="list__title title">Что наc выделяет из конкурентов?</div>
+				<div class="list__wrap text row">
+					<ul>
+						<li>Многолетний опыт оказания услуг по уборке офисов, торговых и бизнес центров, прилегающих территорий, жилых и нежилых помещений на высоком уровне;</li>
+						<li>Решение задач разной степени сложности при уборке после пожаров и после ремонтов;</li>
+						<li>Долгосрочное сотрудничество, наши клиенты остаются с нами;</li>
+						<li>Гибкая ценовая политика;</li>
+					</ul>
+					<ul>
+						<li>Сотрудники-славяне и опытнейшие клининг-менеджеры, готовые в любой момент прийти на помощь (24 7/0);</li>
+						<li>Соблюдение принципов профессиональной этики и конфиденциальности;</li>
+						<li>Большой спектр дополнительных услуг (техобслуживание, мойка остекления, химчистка, аутстаффинг);</li>
+						<li>Лучшая сертифицированная техника и расходные материалы.</li>
+					</ul>
+				</div>
+				<div class="list__btn-wrap"><a data-fancybox data-src="#popup-order" href="javascript:;" class="list__btn btn btn_green btn_normal"><span>Срочная заявка</span></a></div>
+			</div>
+		</div>
+		<div class="ur bg-white">
+			<div class="case">
+				<div class="ur__wrap row">
+					<div class="ur__col">
+						<div class="ur__title title">Юридические данные</div>
+						<div class="ur__text">
+							<ul>
+								<li>Наименование организации;</li>
+								<li>ОГРН;</li>
+								<li>ИНН;</li>
+								<li>КПП;</li>
+								<li>ОКПО;</li>
+								<li>ОКВЭД;</li>
+								<li>Расчетный счет организации;</li>
+								<li>Корреспондентский счет банка;</li>
+								<li>БИК банка.</li>
+							</ul>
 						</div>
 					</div>
-					<div class="calc__total">Итого: <span>0</span> руб.</div>
+					<div class="ur__col">
+						<div class="ur__title title">Оформление заказа</div>
+						<div class="ur__text">Чтобы оставить заявку на уборку, позвоните по номеру 8(495) 150-13-45 и специалисты нашей компании незамедлительно ее примут. Кроме того, вы можете задать все интересующие вас вопросы по этапам осуществления тех или иных работ, используемым средствам и оборудованию, а также уточнить любые другие детали. Клининговая компания МосКлининг оказывает услуги юридическим и физическим лицам на высшем уровне с соблюдением всех установленных регламентов и мер безопасности. Мы искренне надеемся, что наше сотрудничество будет иметь постоянную основу!</div>
+					</div>
 				</div>
 			</div>
 		</div>

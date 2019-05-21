@@ -32,4 +32,38 @@ $(document).ready(function($) {
 			item.addClass('price__list_open');
 		}
 	});
+
+	var hum = $('.hum'),
+			humClass = 'hum_toggle',
+			nav = $('.panel__nav'),
+			navClass = 'panel__nav_toggle'
+
+	hum.click(function(event) {
+		hum.toggleClass(humClass);
+		nav.toggleClass(navClass);
+	});
+
+
+	$slick_slider = $('.reviews_block .reviews__list');
+  settings_slider = {
+    dots: true,
+    arrows: false
+    // more settings
+  }
+  slick_on_mobile( $slick_slider, settings_slider);
+
+// slick on mobile
+  function slick_on_mobile(slider, settings){
+    $(window).on('load resize', function() {
+      if ($(window).width() > 767) {
+        if (slider.hasClass('slick-initialized')) {
+          slider.slick('unslick');
+        }
+        return
+      }
+      if (!slider.hasClass('slick-initialized')) {
+        return slider.slick(settings);
+      }
+    });
+  };
 });

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Grand Clining</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+<div class="main-wrap">
+
+	<header class="header">
+		<div class="panel">
+			<div class="case row between">
+				<div class="panel__logo"><a href="index.html"><img src="upload/logo.png" alt=""></a></div>
+				<nav class="panel__nav">
+					<ul>
+						<li><a href="about.html">О компании</a></li>
+						<li><a href="price.html">Цены</a></li>
+						<li><a href="calc.html">Калькулятор</a></li>
+						<li><a href="reviews.html">Отзывы</a></li>
+						<li class="selected"><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="panel__lang">
+					<ul>
+						<li>rus</li>
+						<li><a href="en/">eng</a></li>
+					</ul>
+				</div>
+				<div class="panel__phone"><a href="tel:+70000000000">+7 (000) 000-00-00</a></div>
+				<div class="panel__hum hum">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<main class="main">
+		<div class="contacts">
+			<div class="case">
+				<div class="contacts__title title title_green"><h1>Контакты</h1></div>
+				<div class="contacts__wrap row">
+					<div class="contacts__list">
+						<div class="contacts__item">
+							<div class="contacts__head">Телефон</div>
+							<div class="contacts__body"><a href="tel:+74951501345">8(495) 150-13-45</a></div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__head">Режим работы</div>
+							<div class="contacts__body">8:00 — 22:00 (без выходных)</div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__head">E-mail</div>
+							<div class="contacts__body"><a href="mailto:info@mosklining.ru">info@mosklining.ru</a></div>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__head">Адрес</div>
+							<div class="contacts__body">Москва, Большой Тишинский пер. 8с2, Офис 12</div>
+						</div>
+					</div>
+					<div class="contacts__map">
+						<div id="map"></div>
+						<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+						<script>
+							ymaps.ready(function () {
+					    var myMap = new ymaps.Map('map', {
+					            center: [55.769221, 37.578100],
+					            zoom: 16,
+					            controls: []
+					        }, {
+					            searchControlProvider: 'yandex#search'
+					        }),
+
+					        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+					            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+					        ),
+
+					        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+					            iconLayout: 'default#image',
+					            iconImageHref: 'upload/marker.png',
+					            iconImageSize: [40, 60],
+					            iconImageOffset: [-20, -60]
+					        })
+
+
+					    myMap.geoObjects.add(myPlacemark)
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="case">
+			<div class="footer__title title">Контакты</div>
+			<div class="footer__wrap row">
+				<div class="footer__col">
+					<p>тел.: +7 (495) 212-1938, 928-1960</p>
+					<p>E-mail: citicleaning@gmail.com</p>
+				</div>
+				<div class="footer__col">
+					<p><a href="http://www.ХорошаяУборка.рф" target="_blank" rel="nofollow">www.ХорошаяУборка.рф</a></p>
+					<p><a href="http://www.cleaninginrussia.com" target="_blank" rel="nofollow">www.cleaninginrussia.com</a></p>
+				</div>
+				<div class="footer__col">
+					<p>Россия, 123100, г. Москва, <br>Набережная Тараса Шевченко, 23 А. "Москва СИТИ Башня 2000".</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+
+<div class="popup popup_normal" id="popup-order">
+	<div class="popup__close" data-fancybox-close></div>
+	<form class="popup__form form">
+		<div class="popup__title">Оставить заявку</div>
+		<div class="form__input input input_border-green input_small input_title">
+			<label class="input__title">Имя</label>
+			<input class="input__wrap" type="text" name="name" placeholder="Ваше имя">
+		</div>
+		<div class="form__input input input_border-green input_small input_title">
+			<label class="input__title">E-mail</label>
+			<input class="input__wrap" type="text" name="email" placeholder="example@mail.ru">
+		</div>
+		<div class="form__input input input_border-green input_small input_title input_phone">
+			<label class="input__title">Телефон</label>
+			<input class="input__wrap" type="tel" name="phone" placeholder="+7 (000) 000-00-00">
+		</div>
+		<div class="form__textarea textarea textarea_border-green textarea_small textarea_title">
+			<label class="textarea__title">Дополнительная информация</label>
+			<textarea name="comment" placeholder="Чем мы можем вам помочь?" class="textarea__wrap"></textarea>
+		</div>
+		<div class="form__btn-wrap"><button class="form__btn btn btn_green btn_small"><span>Срочная заявка</span></button></div>
+	</form>
+</div>
+
+<div class="popup popup_normal" id="popup-thanks">
+	<div class="popup__close" data-fancybox-close></div>
+	<div class="popup__thanks thanks">
+		<div class="popup__title thanks__title">Спасибо!</div>
+		<div class="thanks__text">Ваша заявка успешно отправлена.</div>
+	</div>
+</div>
+</body>
+</html>
