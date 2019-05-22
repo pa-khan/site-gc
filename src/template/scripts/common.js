@@ -106,5 +106,13 @@ $(document).ready(function($) {
   SubmitForm($('.order__btn'), '.order');
   SubmitForm($('.popup__form .form__btn'), '.popup__form');
 
+
+  // $('.calc__radios input').prop('checked', true);
+
+  if ($('.calc__radios input[value = 1]').prop('checked', true)) {
+  	alert(1);
+  }
+
+
   
 });
