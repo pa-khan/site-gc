@@ -393,6 +393,9 @@ input, .btn, .slick-slide, textarea {
 .tar {
   text-align: right; }
 
+.main-wrap {
+  overflow-x: hidden; }
+
 .panel {
   padding-top: 40px;
   position: absolute;
@@ -645,7 +648,7 @@ input, .btn, .slick-slide, textarea {
   .calc__radios {
     margin-left: -75px;
     margin-right: 120px;
-    padding-top: 160px; }
+    padding-top: 78px; }
   .calc__radio {
     width: 245px;
     height: 120px;
@@ -1017,9 +1020,9 @@ input, .btn, .slick-slide, textarea {
     .price__list_open .price__head {
       cursor: default; }
     .price__list_open .price__status:after {
-      -webkit-transform: rotateF(0deg);
-          -ms-transform: rotateF(0deg);
-              transform: rotateF(0deg); }
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); }
   .price__head {
     position: relative;
     color: #fff;

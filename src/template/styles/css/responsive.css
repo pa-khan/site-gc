@@ -259,8 +259,8 @@
       display: flex;
       margin-bottom: 15px; }
     .calc__radio {
-      width: -webkit-calc(100% - 10px);
-      width: calc(100% - 10px);
+      width: -webkit-calc(50% - 10px);
+      width: calc(50% - 10px);
       margin-right: 5px;
       margin-left: 5px;
       margin-bottom: 0; }

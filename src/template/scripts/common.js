@@ -109,9 +109,13 @@ $(document).ready(function($) {
 
   // $('.calc__radios input').prop('checked', true);
 
-  if ($('.calc__radios input[value = 1]').prop('checked', true)) {
-  	alert(1);
-  }
+  $('#stac').click(function(event) {
+	  $('.input_hidden').show();
+  });
+
+  $('#gen').click(function(event) {
+	  $('.input_hidden').hide();
+  });
 
 
   
